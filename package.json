@@ -1,0 +1,49 @@
+{
+  "name": "react-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/react-component.umd.js",
+  "module": "./dist/react-component.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/react-component.es.js",
+      "require": "./dist/react-component.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^4.0.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {}
+}
