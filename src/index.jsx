@@ -1,14 +1,29 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import Tilt from 'react-parallax-tilt';
+import './style.scss';
 
-export default function Component(props) {
-  const container_styles = {
-    width: props.width ? props.width : "100%",
-    height: props.height ? props.height : "600px",
-    padding: "12px",
-    border: "1px solid #d5d6d8",
-    backgroundColor: "rgb(250, 250, 250)",
-  };
+function Glass3D({ innerStyles, width, height }) {
+    const container_styles = {
+        width: width ? width : '100%',
+        height: height ? height : '100%',
+    };
 
-  return <div id="componentcontainer" style={container_styles}></div>;
+    return (
+        <Tilt
+            style={container_styles}
+            className='parallax-effect'
+            perspective={300}
+            glareEnable={true}
+            glareMaxOpacity={0.39}
+        >
+            <div
+                className='inner-element'
+                style={innerStyles ? innerStyles : {}}
+            >
+                <p>Hello World</p>
+            </div>
+        </Tilt>
+    );
 }
+
+export { Glass3D };
